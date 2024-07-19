@@ -1,0 +1,175 @@
+$layout-breakpoint-xl: 1440px;
+$layout-breakpoint-large: 1024px;
+$layout-breakpoint-medium: 768px;
+$layout-breakpoint-mobile: 320px;
+
+@mixin maxWidthPage(){
+    margin: 0 auto;
+    max-width: $layout-breakpoint-xl;
+    width: 100%;
+}
+
+@mixin largeWidthPage(){
+    margin: 0 auto;
+    max-width: $layout-breakpoint-large;
+    width: 100%;
+}
+
+@mixin mediumWidthPage(){
+    margin: 0 auto;
+    max-width: $layout-breakpoint-medium;
+    width: 100%;
+}
+
+header {
+    .top-header {
+        background-color: $first_gray;
+        color: $first_white;
+        font-size: 14px;
+        
+        .top-header-container {
+            @include maxWidthPage();
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding: 0.3rem 1rem;
+            
+            a {
+                color: $first_white;
+                font-weight: bold;
+                text-decoration: underline;
+                transform:  100ms ease-in;
+            }
+        }
+    }
+    .header {
+        margin: 1.87rem 1rem;
+
+        .header-container {
+            @include maxWidthPage();
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                margin-right: 1rem;
+                img {
+                    max-width: 186px;
+                    width: 100%;                    
+                }
+            }
+            .header-search {
+                display: flex;
+                align-items: center;
+                // padding: 0.6rem 0;                
+                max-width: 525px;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    height: 44px;
+                    outline: none;
+                    border: 1px solid #959595;
+                    padding: 0 1rem;                    
+                }
+                button {
+                    height: 44px;
+                    padding: 0 1.5rem;
+                    background-color: $first_red;
+                    color: $first_white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    transition: all 100ms ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $first_green;
+                    }
+                }
+            }
+        }
+    }
+    nav {
+        background-color: $first_red;
+
+        ul {
+            @include maxWidthPage();
+            padding: 1.12rem 1rem;
+            display: flex;
+            gap: 6.87rem;
+
+            li {
+                a {
+                    color: $first_white;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    transition: all 100ms ease-in;
+
+                    &:hover {
+                        color: $first_gray;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: $layout-breakpoint-large) {
+    .top-header-container {
+        max-width: $layout-breakpoint-large !important;
+
+    }
+    nav {
+        ul {
+            max-width: $layout-breakpoint-large;
+            gap: 3.87rem !important;
+        }
+    }
+}
+@media (max-width: $layout-breakpoint-medium) {
+    .top-header-container {
+        max-width: $layout-breakpoint-medium !important;
+
+    }
+    nav {
+        ul {
+            max-width: $layout-breakpoint-medium;
+            gap: 1.87rem !important;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    nav {
+        display: none !important;
+    }
+}
+@media (max-width: 400px) {
+    .header-container{
+        justify-content: center !important;
+        
+        a {
+            margin-right: 0 !important;
+        }        
+    }
+    .header-search {
+        display: none !important;
+    }
+}
+@media (max-width: $layout-breakpoint-mobile) {
+    .top-header-container {
+        max-width: $layout-breakpoint-mobile !important;
+        justify-content: center;
+
+    }
+    
+    nav {
+        display: none !important;
+        ul {
+            max-width: $layout-breakpoint-mobile;
+            gap: 1rem !important;
+        }
+    }
+}

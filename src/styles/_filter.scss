@@ -1,0 +1,99 @@
+.filter {
+    width: 260px;
+    border: 1px solid #E2DEDC;
+    padding: 1rem;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $second_red;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+    h4 {
+        color: $first_blue;
+        font-size: 1.12rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+    .filter-categories {
+        margin-bottom: 1.5rem;
+    }
+    .filter-colors {
+        margin-bottom: 1.5rem;
+
+        .filter-buttons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            button {            
+                width: 48px;
+                height: 24px;
+                display: block;
+                cursor: pointer;
+            }
+            .black_color {
+                background-color: #000000;
+            }
+            .orange_color {
+                background-color: orange;
+            }
+            .yellow_color {
+                background-color: yellow;
+            }
+            .gray_color {
+                background-color: gray;
+            }
+            .pink_color {
+                background-color: rgb(255, 16, 135);
+            }
+            .blue_color {
+                background-color: blue;
+            }
+            .beige_color {
+                background-color: beige;
+            }
+        }
+
+        .all_colors {
+            color: $first_gray;
+            margin-top: .7rem;
+            cursor: pointer;
+        }
+    }
+    .filter-types {
+        margin-bottom: 1rem;
+    }
+    .filter-gender {
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 5px;
+            padding-left: 1rem;
+            
+            button {
+                font-size: 1rem;
+                color: $first_blue;
+                cursor: pointer;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 1rem;
+
+        a {
+            color: $first_gray;
+        }
+    }
+    .no-filter {
+        font-size: 0.8rem;
+        color: $third_gray;
+    }
+}

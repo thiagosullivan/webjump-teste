@@ -1,0 +1,37 @@
+@mixin minHeight(){
+    height: calc(100vh - 343px)
+}
+
+.home {
+    padding: 1.5rem 0;
+    display: flex;
+    @include minHeight();
+
+    .home-container {
+        width: 100%;
+
+        .bg-home {
+            width: 100%;
+            height: auto;
+        }
+        .home-text {            
+            color: $first_gray;
+            font-size: 1rem;
+            text-align: justify;
+            line-height: 20px;
+
+            h2 {
+                font-weight: 600;
+                font-size: 1.62rem;
+                margin: 1rem 0;
+            }            
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .home {
+        height: calc(100vh - 247px);
+        padding: 1.5rem 1rem;
+    }
+}

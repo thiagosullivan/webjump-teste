@@ -1,0 +1,35 @@
+.aside {
+    max-width: 260px;
+    width: 100%;
+    background-color: $fourth_gray;
+    margin-right: 1.56rem;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+
+        a {
+            font-size: 16px;
+            font-weight: 600;
+            color: $second_red;
+            transition: all 100ms ease-in;
+
+            &:hover {
+                color: $first_black;
+            }
+        }
+    }
+
+}
+@media (max-width: 805px) {
+    .aside {
+        max-width: 200px;
+    }
+}
+@media (max-width: 620px) {
+    .aside {
+        display: none;
+    }
+}

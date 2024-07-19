@@ -1,0 +1,41 @@
+$first_gray: #231F20;
+$second_gray: #959595;
+$third_gray: #626262;
+$fourth_gray: #E2DEDC;
+$first_red: #CB0D1F;
+$second_red: #E50019;
+$first_black: #000000;
+$second_black: #1A1818;
+$third_black: #231F20;
+$first_white: #ffffff;
+$first_green: #00A8A9;
+$first_blue: #1E2B50;
+$first_orange: #F26324;
+
+@import './header';
+@import './reset';
+@import './footer';
+@import './aside';
+@import './home';
+@import './itemPage';
+@import './filter';
+@import './contact';
+
+main {
+    @include maxWidthPage();
+}
+
+.breadcrumb {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 1.62rem 1rem;
+
+    a {
+        color: $first_green;
+    }
+    p {
+        color: $first_red;
+    }
+}
