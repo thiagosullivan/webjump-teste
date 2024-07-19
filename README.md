@@ -13,8 +13,9 @@ Outras tecnologias adotadas foram:
 
 ## Como rodar o projeto
  Clone o projeto do backend que possui a API
+(aconselho clonar esse projeto porque foram feitas algumas correções nos nomes dos parametros usados no filtro, alguns nomes estavam masculino, outros femininos)
  ```
-    git clone https://bitbucket.org/webjump/assessment-frontend/src/master/
+    git clone [https://bitbucket.org/webjump/assessment-frontend/src/master/](https://github.com/thiagosullivan/webjump-teste-api.git)
  ```
  Instale as dependência
  ```
